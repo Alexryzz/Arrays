@@ -33,5 +33,62 @@ public class Main {
             }
         }
         System.out.println();
+
+        // Task 3
+        System.out.println("Task 3");
+        int short_num = arr[0];
+        int long_num = arr[0];
+        for( int element : arr){
+            int l = long_num;
+            int elem = element;
+            do{
+                l = l / 10;
+                elem = elem / 10;
+            }
+            while (l != 0 && elem != 0);
+            if (l == 0 && elem !=0){
+                long_num = element;
+            }
+        }
+        for( int element : arr){
+            int s = short_num;
+            int elem = element;
+            do{
+                s = s / 10;
+                elem = elem / 10;
+            }
+            while (s != 0 && elem != 0);
+            if (s != 0 && elem ==0){
+                short_num = element;
+            }
+        }
+        System.out.print("Самые длинные числа: ");
+        for( int element : arr){
+            int l = long_num;
+            int elem = element;
+            do{
+                l = l / 10;
+                elem = elem / 10;
+            }
+            while (l != 0 && elem != 0);
+            if (l == 0 && elem ==0){
+                System.out.print(element + " ");
+            }
+        }
+        System.out.println();
+        System.out.print("Самые короткие числа: ");
+        for( int element : arr){
+            int s = short_num;
+            int elem = element;
+            do{
+                s = s / 10;
+                elem = elem / 10;
+            }
+            while (s != 0 && elem != 0);
+            if (s == 0 && elem ==0){
+                System.out.print(element + " ");
+            }
+        }
+        System.out.println();
     }
 }
