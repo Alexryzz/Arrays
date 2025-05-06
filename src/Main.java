@@ -108,5 +108,43 @@ public class Main {
                 j = i;
             }
         }
+
+        // Task 5
+        System.out.println("Task 5: ");
+        for (int i = 0; i < arr.length - 1; i++) {
+            j = i + 1;
+            for (; j < arr.length; j++){
+                if (arr[i] == arr[j]){
+                    System.out.print(arr[i] + " ");
+                    System.out.println(arr[j]);
+                }
+                int temp1 = arr[i];
+                int temp2 = arr[j];
+                int t2 = arr[j];
+                int n = 0;
+                while (t2 != 0){
+                    t2 /= 10;
+                    n++;
+                }
+                flag = true;
+                while (flag){
+                    if(temp1 % 10 == (int) (temp2 / Math.pow(10, n-1))){
+                        temp1 /= 10;
+                        temp2 = temp2 - (int) Math.pow(10, n-1) * (temp2 / (int) Math.pow(10, n-1));
+                        if(temp1 == 0 && temp2 == 0){
+                            break;
+                        }
+                        n--;
+                    }
+                    else {flag = false;}
+                }
+                if(flag) {
+                    System.out.print(arr[i] + " ");
+                    System.out.println(arr[j]);
+                }
+
+
+            }
+        }
     }
 }
