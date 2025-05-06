@@ -90,5 +90,23 @@ public class Main {
             }
         }
         System.out.println();
+
+        // Task 4
+        System.out.println("Task 4: ");
+        System.out.println("Числа в порядке возрастания: ");
+        boolean flag = false;
+        int j = 0;
+        for(int i = 1; i < arr.length - 1; i++){
+            if(arr[i] > arr[j] && flag == false){
+                System.out.print(arr[j] + " ");
+                System.out.print(arr[i] + " ");
+                flag = true;
+                j = i;
+            }
+            if(arr[i] > arr[j] && flag == true){
+                System.out.print(arr[i] + " ");
+                j = i;
+            }
+        }
     }
 }
