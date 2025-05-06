@@ -16,5 +16,22 @@ public class Main {
         }
         System.out.println(max);
         System.out.println(min);
+
+        // Task 2
+        System.out.println("Task 2");
+        System.out.println("Четные:");
+        for (int element : arr){
+            if (element % 2 == 0){
+                System.out.print(element + " ");
+            }
+        }
+        System.out.println();
+        System.out.println("Нечетные:");
+        for (int element : arr){
+            if (element % 2 == 1 || element % 2 == -1){
+                System.out.print(element + " ");
+            }
+        }
+        System.out.println();
     }
 }
